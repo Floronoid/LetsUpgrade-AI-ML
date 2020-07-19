@@ -1,0 +1,155 @@
+
+                     DAY 8:Descriptive statistics
+import pandas as pd
+
+dataset = pd.read_excel("3. Descriptive Statistics.xlsx", sheet_name=0)
+
+dataset.head()
+Out[2]: 
+   ID Gender           Birth Date  ...  Job Time  Prev Exep  Minority
+0   3      f           07/26/1929  ...        98        381         0
+1   4      f           04/15/1947  ...        98        190         0
+2   8      f  1966-06-05 00:00:00  ...        98          0         0
+3   9      f           01/23/1946  ...        98        115         0
+4  10      f           02/13/1946  ...        98        244         0
+
+[5 rows x 11 columns]
+
+dataset.mean()
+Out[3]: 
+ID                 237.500000
+Education           13.491561
+JobCategory          1.411392
+CurrentSalary    34419.567511
+After6Months     25717.827004
+SalBegin         17016.086498
+Job Time            81.109705
+Prev Exep           95.860759
+Minority             0.219409
+dtype: float64
+
+dataset.median()
+Out[4]: 
+ID                 237.5
+Education           12.0
+JobCategory          1.0
+CurrentSalary    28875.0
+After6Months     21900.0
+SalBegin         15000.0
+Job Time            81.0
+Prev Exep           55.0
+Minority             0.0
+dtype: float64
+
+dataset.mode()
+J:\Anaconda3\lib\site-packages\pandas\core\algorithms.py:829: UserWarning: Unable to sort modes: '<' not supported between instances of 'datetime.datetime' and 'str'
+  warn("Unable to sort modes: {error}".format(error=e))
+Out[5]: 
+      ID Gender           Birth Date  ...  Job Time  Prev Exep  Minority
+0      1      m           05/25/1961  ...      81.0        0.0       0.0
+1      2    NaN  1965-11-05 00:00:00  ...      93.0        NaN       NaN
+2      3    NaN           03/18/1961  ...       NaN        NaN       NaN
+3      4    NaN           10/20/1959  ...       NaN        NaN       NaN
+4      5    NaN  1934-04-02 00:00:00  ...       NaN        NaN       NaN
+5      6    NaN  1962-08-02 00:00:00  ...       NaN        NaN       NaN
+6      7    NaN           08/25/1961  ...       NaN        NaN       NaN
+7      8    NaN  1965-10-11 00:00:00  ...       NaN        NaN       NaN
+8      9    NaN  1966-05-04 00:00:00  ...       NaN        NaN       NaN
+9     10    NaN           07/18/1962  ...       NaN        NaN       NaN
+10    11    NaN           05/13/1967  ...       NaN        NaN       NaN
+11    12    NaN  1964-12-02 00:00:00  ...       NaN        NaN       NaN
+12    13    NaN                  NaN  ...       NaN        NaN       NaN
+13    14    NaN                  NaN  ...       NaN        NaN       NaN
+14    15    NaN                  NaN  ...       NaN        NaN       NaN
+15    16    NaN                  NaN  ...       NaN        NaN       NaN
+16    17    NaN                  NaN  ...       NaN        NaN       NaN
+17    18    NaN                  NaN  ...       NaN        NaN       NaN
+18    19    NaN                  NaN  ...       NaN        NaN       NaN
+19    20    NaN                  NaN  ...       NaN        NaN       NaN
+20    21    NaN                  NaN  ...       NaN        NaN       NaN
+21    22    NaN                  NaN  ...       NaN        NaN       NaN
+22    23    NaN                  NaN  ...       NaN        NaN       NaN
+23    24    NaN                  NaN  ...       NaN        NaN       NaN
+24    25    NaN                  NaN  ...       NaN        NaN       NaN
+25    26    NaN                  NaN  ...       NaN        NaN       NaN
+26    27    NaN                  NaN  ...       NaN        NaN       NaN
+27    28    NaN                  NaN  ...       NaN        NaN       NaN
+28    29    NaN                  NaN  ...       NaN        NaN       NaN
+29    30    NaN                  NaN  ...       NaN        NaN       NaN
+..   ...    ...                  ...  ...       ...        ...       ...
+444  445    NaN                  NaN  ...       NaN        NaN       NaN
+445  446    NaN                  NaN  ...       NaN        NaN       NaN
+446  447    NaN                  NaN  ...       NaN        NaN       NaN
+447  448    NaN                  NaN  ...       NaN        NaN       NaN
+448  449    NaN                  NaN  ...       NaN        NaN       NaN
+449  450    NaN                  NaN  ...       NaN        NaN       NaN
+450  451    NaN                  NaN  ...       NaN        NaN       NaN
+451  452    NaN                  NaN  ...       NaN        NaN       NaN
+452  453    NaN                  NaN  ...       NaN        NaN       NaN
+453  454    NaN                  NaN  ...       NaN        NaN       NaN
+454  455    NaN                  NaN  ...       NaN        NaN       NaN
+455  456    NaN                  NaN  ...       NaN        NaN       NaN
+456  457    NaN                  NaN  ...       NaN        NaN       NaN
+457  458    NaN                  NaN  ...       NaN        NaN       NaN
+458  459    NaN                  NaN  ...       NaN        NaN       NaN
+459  460    NaN                  NaN  ...       NaN        NaN       NaN
+460  461    NaN                  NaN  ...       NaN        NaN       NaN
+461  462    NaN                  NaN  ...       NaN        NaN       NaN
+462  463    NaN                  NaN  ...       NaN        NaN       NaN
+463  464    NaN                  NaN  ...       NaN        NaN       NaN
+464  465    NaN                  NaN  ...       NaN        NaN       NaN
+465  466    NaN                  NaN  ...       NaN        NaN       NaN
+466  467    NaN                  NaN  ...       NaN        NaN       NaN
+467  468    NaN                  NaN  ...       NaN        NaN       NaN
+468  469    NaN                  NaN  ...       NaN        NaN       NaN
+469  470    NaN                  NaN  ...       NaN        NaN       NaN
+470  471    NaN                  NaN  ...       NaN        NaN       NaN
+471  472    NaN                  NaN  ...       NaN        NaN       NaN
+472  473    NaN                  NaN  ...       NaN        NaN       NaN
+473  474    NaN                  NaN  ...       NaN        NaN       NaN
+
+[474 rows x 11 columns]
+
+dataset['CurrentSalary'].mode()
+Out[6]: 
+0    30750
+dtype: int64
+
+dataset['CurrentSalary'].skew()
+Out[7]: 2.1246062823682506
+
+dataset['CurrentSalary'].kurt()
+Out[8]: 5.377822396136782
+
+import matplotlib.pyplot as plt
+
+plt.boxplot(dataset['CurrentSalary'])
+Out[10]: 
+{'whiskers': [<matplotlib.lines.Line2D at 0x133a2d354a8>,
+  <matplotlib.lines.Line2D at 0x133a2d357f0>],
+ 'caps': [<matplotlib.lines.Line2D at 0x133a2d35b38>,
+  <matplotlib.lines.Line2D at 0x133a2d35e80>],
+ 'boxes': [<matplotlib.lines.Line2D at 0x133a2d350b8>],
+ 'medians': [<matplotlib.lines.Line2D at 0x133a2d35f60>],
+ 'fliers': [<matplotlib.lines.Line2D at 0x133a2d48550>],
+ 'means': []}
+￼
+
+plt.scatter(dataset['CurrentSalary'],dataset['After6Months'])
+Out[11]: <matplotlib.collections.PathCollection at 0x133a2db3c50>
+￼
+
+dataset['CurrentSalary'].var()
+Out[12]: 291578214.45314944
+
+dataset['CurrentSalary'].describe()
+Out[13]: 
+count       474.000000
+mean      34419.567511
+std       17075.661465
+min       15750.000000
+25%       24000.000000
+50%       28875.000000
+75%       36937.500000
+max      135000.000000
+Name: CurrentSalary, dtype: float64
